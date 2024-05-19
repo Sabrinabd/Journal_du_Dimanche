@@ -21,6 +21,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  line-height: 2rem;
 }
 a {
   font-size: 1.4rem;
@@ -34,11 +35,24 @@ h4,
 h5,
 h6 {
   font-family: "Staatliches", sans-serif;
+  margin: 1rem 0rem;
+}
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 ul {
   list-style: none;
 }
 
+p {
+  margin: 1rem 0rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
 /*utility*/
 .container {
   display: block;
@@ -51,6 +65,11 @@ ul {
 }
 .text-primary:hover {
   opacity: 0.8;
+}
+
+.text-hint {
+  color: var(--gray-hint);
+  font-size: 1.2rem;
 }
 .btn {
   font-size: 1.6rem;
@@ -69,6 +88,12 @@ ul {
 .btn-light:hover {
   background: var(--primary);
   color: white;
+}
+
+/*generic*/
+.auteur {
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 /*header*/
 header {
@@ -103,7 +128,59 @@ nav {
   justify-content: space-between;
   position: sticky;
   top: 0;
+  background: white;
 }
 nav a {
   text-decoration: none;
+}
+
+/*showcase*/
+
+.showcase {
+  padding: 1.5rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+}
+.showcase article:first-child {
+  grid-column: 1 / 2;
+  grid-row: 1 /4;
+}
+.showcase article:last-child {
+  grid-column: 3 / 4;
+  grid-row: 1 /4;
+}
+
+.showcase article.article-small img {
+  width: 100px;
+  height: auto;
+}
+
+.article-small {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 80px auto;
+  grid-template-rows: 80px;
+  grid-auto-rows: auto;
+
+  border-bottom: 1px solid var(--gray);
+}
+.article-small p {
+  margin-top: 1rem;
+}
+.article-small h3 {
+  margin-left: 1.5rem;
+}
+
+.article-small .article-content {
+  grid-column: span 2;
+  max-height: 6rem;
+  overflow: hidden;
+}
+.article-small .auteur {
+  grid-column: span 2;
+}
+.article-small .text-hint {
+  grid-column: span 2;
 }
