@@ -1,0 +1,96 @@
+/*reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*variables*/
+:root {
+  --primary: #be2529;
+  --dark: #333;
+  --secondary: #0d0d0d;
+  --gray: #ddd;
+  --gray-light: #eee;
+  --gray-hint: #555;
+}
+/*general*/
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+a {
+  font-size: 1.4rem;
+  color: var(--dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Staatliches", sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+/*utility*/
+.container {
+  display: block;
+  max-width: 1100px;
+  margin: auto;
+}
+.text-primary {
+  color: var(--primary);
+}
+.text-primary:hover {
+  opacity: 0.8;
+}
+.btn {
+  font-size: 1.6rem;
+  padding: 1rem 1rem;
+  border-radius: 0.5px;
+  cursor: pointer;
+  border: 0px;
+  transition: all 0.2s;
+}
+.btn-light {
+  background: white;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 8px;
+}
+.btn-light:hover {
+  background: var(--primary);
+  color: white;
+}
+/*header*/
+header {
+  display: grid;
+  place-items: center start;
+  grid-template-columns: 1fr auto;
+  line-height: 3.5rem;
+  margin: 0.5rem auto;
+}
+header .logo {
+  font-size: 3rem;
+  font-family: "Staatliches", cursive;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+header ul li {
+  padding: 1rem 1.5rem;
+}
+header a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
