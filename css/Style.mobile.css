@@ -1,0 +1,67 @@
+/*header*/
+
+header {
+  grid-template-columns: 1fr;
+  place-items: center center;
+  line-height: 2.5rem;
+}
+header ul {
+  flex-direction: column;
+  place-self: stretch;
+}
+header a {
+  display: block;
+  padding: 0.5rem 0;
+}
+header .logo {
+  font-size: 2rem;
+  font-family: "Staatliches", cursive;
+  line-height: 3.2rem;
+}
+header ul li {
+  padding: 0.2rem;
+  align-self: stretch;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-light);
+}
+header ul li:last-child {
+  display: none;
+}
+/*nav*/
+nav {
+  overflow: hidden;
+}
+nav a {
+  padding: 0 1rem;
+}
+
+/*showcase*/
+.showcase {
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+}
+.showcase article:first-child {
+  grid-column: 1 / 2;
+  grid-row: 1 /2;
+}
+.showcase article:last-child {
+  display: none;
+}
+/*pub*/
+.pub {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.pub img {
+  width: 50%;
+  height: auto;
+}
+.pub h1 {
+  grid-area: h1;
+  font-size: 2rem;
+}
+/*content*/
+.popular {
+  display: none;
+}
