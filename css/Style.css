@@ -257,6 +257,7 @@ nav a {
 .content {
   margin: 3rem 0rem;
   display: flex;
+  align-items: start;
 }
 .articles {
   flex: auto;
@@ -270,6 +271,11 @@ nav a {
     "content img"
     "auteur img"
     "details img";
+  margin-bottom: 2rem;
+}
+.articles article h3,
+.articles article p {
+  margin: 0.2rem 0rem;
 }
 .articles article img {
   grid-area: img;
@@ -289,6 +295,30 @@ nav a {
 }
 .popular {
   flex: 350px;
+  padding: 0 3rem;
+  position: sticky;
+  top: 45px;
+}
+.popular ul li {
+  display: grid;
+  grid-template-columns: 30px auto;
+  place-items: center center;
+  margin-bottom: 1rem;
+}
+.popular ul li div:first-child {
+  font-size: 1.5rem;
+  color: var(--gray-hint);
+}
+.popular ul li div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.popular ul li p,
+.popular ul li h3 {
+  margin: 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .underline {
   padding-bottom: 1.5rem;
