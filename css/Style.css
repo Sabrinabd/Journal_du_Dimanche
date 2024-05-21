@@ -252,3 +252,46 @@ nav a {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/*articles*/
+.content {
+  margin: 3rem 0rem;
+  display: flex;
+}
+.articles {
+  flex: auto;
+}
+.articles article {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "title img"
+    "content img"
+    "auteur img"
+    "details img";
+}
+.articles article img {
+  grid-area: img;
+}
+
+.articles article h3 {
+  grid-area: title;
+}
+.articles article p:first-child {
+  grid-area: content;
+}
+.articles article .auteur {
+  grid-area: auteur;
+}
+.articles article .text-hint {
+  grid-area: details;
+}
+.popular {
+  flex: 350px;
+}
+.underline {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 2rem;
+}
